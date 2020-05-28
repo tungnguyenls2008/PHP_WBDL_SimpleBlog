@@ -51,6 +51,7 @@ class PostsController extends Controller
             'title' => 'required',
             'body' => 'required',
             'cover_image' => 'image|nullable|max:1999'
+
         ]);
 
         // Handle File Upload

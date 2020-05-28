@@ -14,6 +14,11 @@
         <div class="form-group">
             {{Form::file('cover_image')}}
         </div>
+    <div class="form-group">
+        {{Form::label('category','Category')}}
+        {{Form::select(3)}}
+    </div>
+
         {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}
 
