@@ -23,14 +23,18 @@
                     @if(count($posts) > 0) 
                         <table class=" table">
                             <tr>
+                                <th>Cover</th>
                                 <th>Title</th>
+                                <th>Category</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
 
                             @foreach($posts as $post)
                                 <tr>
+                                    <td><img style="width:100px" src="{{asset('/storage/cover_images/'.$post->cover_image)}}"></td>
                                     <td><a href="/posts/{{$post->id}}">{{$post->title}}</a></td>
+                                    <td><a href="/posts/{{$post->category_id}}">{{$post->category_id}}</a></td>
                                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
                                     <td>
                                         {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST']) !!}

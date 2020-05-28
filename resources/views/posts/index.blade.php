@@ -11,7 +11,8 @@
                     </div>
                     <div class="col-md-8 col-sm-8">
                         <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
-                        <small>Written on {{$post->created_at}}</small>
+                        <small>Written on {{$post->created_at}}</small><br>
+                        <small>Category: {{$post->category_id}}</small>
                         <br>
                         <small>Written By <h5>{{$post->user->name}}</h5></small>
                     </div>
